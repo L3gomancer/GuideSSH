@@ -5,7 +5,7 @@ SSH (Secure SHell) is a way to connect your computer to another computer or serv
 
 ## Summary
 To access a server quickly, run this command and type "y" to add the server details to '~/.ssh/known_hosts'.
-`ssh <user>@<IP>`
+```ssh <user>@<IP>```
 
 To *print* the current *working directory*
 `pwd`
