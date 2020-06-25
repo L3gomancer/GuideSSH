@@ -1,7 +1,7 @@
 # GuideSSH
 A brief guide to using SSH
 
-SSH (Secure SHell) is a way to connect your computer to another computer or server. You can use this if you have a web project you want to host on a server you own, or if you have a Linux device you need to transfer files to such as a smart-home product or a Raspberry Pi. This guide will cover ways to connect to a Linux server from Mac or Linux and will cover generating your own SSH keys. It assumes basic knowledge of the Bash command line but feel free to read teh manual for every command mentioned here, such as `man ssh-keygen`.
+SSH (Secure SHell) is a way to connect your computer to another computer or server. You can use this if you have a web project you want to host on a server you own, or if you have a Linux device you need to transfer files to such as a smart-home product or a Raspberry Pi. This guide will cover ways to connect to a Linux server from Mac or Linux and will cover generating your own SSH keys. It assumes basic knowledge of the Bash command line but feel free to read the manual for every command mentioned here, such as `man ssh-keygen`.
 
 ## Summary
 
