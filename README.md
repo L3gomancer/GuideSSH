@@ -4,8 +4,11 @@ A brief guide to using SSH
 SSH (Secure SHell) is a way to connect your computer to another computer or server. You can use this if you have a web project you want to host on a server you own, or if you have a Linux device you need to transfer files to such as a smart-home product or a Raspberry Pi. This guide will cover ways to connect to a Linux server from Mac or Linux and will cover generating your own SSH keys. It assumes basic knowledge of the Bash command line.
 
 ## Summary
+
 To access a server quickly, run this command and type "y" to add the server details to '~/.ssh/known_hosts'.
-```ssh <user>@<IP>```
+```bash
+ssh <user>@<IP>
+```
 
 To *print* the current *working directory*
 `pwd`
@@ -22,6 +25,7 @@ To transfer all files in the current local folder to 'Documents' in server's Hom
 
 
 ## More Detail
+
 The setup is assumed to be:
 * A development computer you have admin/root access to, connected to a local network by router, with OpenSSH
 * A server or device you have admin/root access to, connected to the same network or the internet, with OpenSSH
@@ -35,6 +39,7 @@ Find out the IP of your server. If you physically set it up on your home network
 
 
 ### Generate The SSH Keys
+
 To specify a name, a location and use RSA
 $ ssh-keygen -f ~/.ssh/<keyname>
 Or to follow prompts, name the file, and skip the passphrase
