@@ -18,8 +18,6 @@ To transfer all files in the current local folder to 'Documents' in server's Hom
 scp * <user>@<IP>:~/Documents
 ```
 
----
-
 ## More Detail
 ### Setup
 The setup is assumed to be:
@@ -48,8 +46,6 @@ ssh <user>@<hostname>
 ```
 If the server's settings change in the future because, for example, your device moved on your wireless network and was assigned a new IP then you may get a scary warning when you try to connect again. Ignore it and manually edit 'known_hosts' as the warning suggests.
 
-Another way to use SSH is to generate a pair of secure keys, one public key stored on the server which acts like a lock, and a private key which is stored on your connecting machine. These allow the machines to recognise each other automatically without a password and keep a connection open. Much like real locks and keys, a public key may be publically visible since it is not usable without its counterpart, however a private key should not be shared with anyone and should only be associated with one machine. If a private key is lost then it should be discarded and a new one generated. Public keys are text files with the extension ".pub", private keys do not need an extension.
-
 ### Transfer Files
 
 To transfer a file to the server's Home directory, use 'scp' (Secure CoPy)
@@ -62,6 +58,8 @@ scp * <user>@<IP>:~/Documents
 ```
 
 ### Generate The SSH Keys
+
+Another way to use SSH is to generate a pair of secure keys, one public key stored on the server which acts like a lock, and a private key which is stored on your connecting machine. These allow the machines to recognise each other automatically without a password and keep a connection open. Much like real locks and keys, a public key may be publically visible since it is not usable without its counterpart, however a private key should not be shared with anyone and should only be associated with one machine. If a private key is lost then it should be discarded and a new one generated. Public keys are text files with the extension ".pub", private keys do not need an extension.
 
 To specify a private key file name, its location and use the default encryption method
 ```bash
@@ -86,9 +84,9 @@ It is now possible use the private key to connect to the server using the `-i` o
 ```bash
 ssh -i ~/.ssh/<priv-key> <user>@<host>
 ```
-Optionally, it is possible to make your local machine automatically associate the server with the corresponding private key
-
 ### Configuration
+
+Optionally, it is possible to make your local machine automatically associate the server with the corresponding private key
 
 Add the private key to an authorisation agent
 ```bash
@@ -98,7 +96,7 @@ In the folder '~/.ssh' create a file 'config' and add a shortname to it
 ```bash
 nano ~/.ssh/config
 ```
-A template confugration file from ![](https://linux.die)
+A template configuration file from ![](https://linux.die)
 ```
 Host <shortname>
     HostName      <IP>
